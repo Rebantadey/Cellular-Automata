@@ -43,7 +43,7 @@ def automata():
         render(array, pixel_size, screen, h)
 
         h += pixel_size
-        if h == 1000:
+        if h == args.height:
             h = 0
             pygame.display.update()
         clock.tick(args.frame_rate)
