@@ -39,9 +39,9 @@ def automata():
     screen.fill((0, 0, 0))
     running = True
     while running:
+        render(array, pixel_size, screen, h)
         new_array = calc_state(array, rule)
-        render(new_array, pixel_size, screen, h)
-
+        
         h += pixel_size
         if h >= args.height:
             h = 0
