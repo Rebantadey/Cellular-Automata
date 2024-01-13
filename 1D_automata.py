@@ -40,7 +40,7 @@ def automata():
     running = True
     while running:
         new_array = calc_state(array, rule)
-        render(array, pixel_size, screen, h)
+        render(new_array, pixel_size, screen, h)
 
         h += pixel_size
         if h >= args.height:
