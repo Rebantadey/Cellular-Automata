@@ -6,11 +6,11 @@ from utils.render import render
 from utils.theory import calc_state
 
 argument_parser = argparse.ArgumentParser()
-argument_parser.add_argument('--width', type=int, default=999, help='width of the screen')
-argument_parser.add_argument('--height', type=int, default=999, help='height of the screen')
-argument_parser.add_argument('--frame_rate', type=int, default=30, help='frame rate of the simulation')
-argument_parser.add_argument('--pixel_size', type=int, default=5, help='pixel size of the array block')
-argument_parser.add_argument('--probability', type=float, default=0.05, help='probability of the cell being alive in initial state')
+argument_parser.add_argument('--width', type=int, default=1920, help='width of the screen')
+argument_parser.add_argument('--height', type=int, default=1080, help='height of the screen')
+argument_parser.add_argument('--frame_rate', type=int, default=100, help='frame rate of the simulation')
+argument_parser.add_argument('--pixel_size', type=int, default=7, help='pixel size of the array block')
+argument_parser.add_argument('--probability', type=float, default=0.075, help='probability of the cell being alive in initial state')
 
 args = argument_parser.parse_args()
 
@@ -28,6 +28,13 @@ def initialize():
 
     return init_array, pixel_size, screen
 
+def calc(new_array, old_array):
+    flag = new_array - old_array
+    birth = np.count_nonzero(flag == 1)
+    death = np.count_nonzero(flag == -1)
+
+    return birth, death
+
 def automata():
     init_array, pixel_size, screen = initialize()
     array = init_array.copy()
@@ -36,12 +43,18 @@ def automata():
     screen.fill((0, 0, 0))
     running = True
 
+    birth = np.array([])
+    dead = np.array([])
+
     while running:
-        render(screen, array, pixel_size)
         new_array = calc_state(array)
+        render(screen, array, new_array, pixel_size)
+        
+        birth, dead = np.append(birth, calc(new_array, array)[0]), np.append(dead, calc(new_array, array)[1])
         
         pygame.display.update()
         clock.tick(args.frame_rate)
+     
         array = new_array
 
         for event in pygame.event.get():
