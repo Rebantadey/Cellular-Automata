@@ -1,10 +1,10 @@
 import pygame
 
 def get_color(value):
-    if value == 0:
+    if value == 1:
+        return (217, 162, 11)
+    elif value == 0:
         return (0, 0, 0)
-    else:
-        return (11, 219, 230)
 
 def render(screen, array, pixel_size):
     for i in range(array.shape[0]):

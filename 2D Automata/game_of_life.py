@@ -10,7 +10,7 @@ argument_parser.add_argument('--width', type=int, default=999, help='width of th
 argument_parser.add_argument('--height', type=int, default=999, help='height of the screen')
 argument_parser.add_argument('--frame_rate', type=int, default=30, help='frame rate of the simulation')
 argument_parser.add_argument('--pixel_size', type=int, default=5, help='pixel size of the array block')
-argument_parser.add_argument('--probability', type=float, default=0.02, help='probability of the cell being alive in initial state')
+argument_parser.add_argument('--probability', type=float, default=0.05, help='probability of the cell being alive in initial state')
 
 args = argument_parser.parse_args()
 
@@ -39,7 +39,7 @@ def automata():
     while running:
         render(screen, array, pixel_size)
         new_array = calc_state(array)
-
+        
         pygame.display.update()
         clock.tick(args.frame_rate)
         array = new_array
