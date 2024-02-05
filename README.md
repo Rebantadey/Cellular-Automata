@@ -20,7 +20,9 @@ This project implements a cellular automaton, a discrete computational model tha
    cd cellular-automata
 
 2. Install Dependencies
-pip install -r requirements.txt
+    
+    ```bash
+    pip install -r requirements.txt
 
-Contributing
+## Contributing
 Feel free to contribute by opening issues or submitting pull requests. Follow our Contribution Guidelines for more details.
