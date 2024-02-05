@@ -19,3 +19,5 @@ where
 - FRAME_RATE determines the frame rate of the simulation.
 - PIXEL_SIZE represents the block size of each cell in the simulation.
 - PROBABILITY denotes the probability of living cell in generation 0.
+
+![Screenshot from 2024-02-05 22-55-57](https://github.com/Rebantadey/Cellular-Automata/assets/109721829/5ec023bf-6b4e-470b-ba8a-c4674a8751dd)
