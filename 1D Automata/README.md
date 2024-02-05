@@ -18,4 +18,4 @@ where
 
 ## Rules
 
-A cell in a 1D automata has two neigbours. Based on the value of the neighbor, the cell interacts and creates the pattern that we see while iterating through various generations. There are 256 different rules which the cells can follow. Few of the notable rules are 22, 45, 122.
+A cell in a 1D automata has two neigbours. Based on the value of the neighbor, the cell interacts and creates the pattern that we see while iterating through various generations. There are 256 different rules which the cells can follow. A few of the notable rules are 22, 45, 122.
