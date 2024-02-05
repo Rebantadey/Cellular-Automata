@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This project implements a cellular automaton, a discrete computational model that consists of a grid of cells, each in one of a finite number of states. The state of each cell evolves over time based on a set of rules.
+Cellular automata are computational models consisting of a grid of cells, each in a particular state. The state of each cell evolves over discrete time steps based on predefined rules, often determined by the states of neighboring cells. These simple local interactions can lead to complex and dynamic global patterns. Cellular automata find applications in various fields, including computer science, physics, biology, and artificial life studies. Notable examples include Conway's Game of Life, illustrating how simple rules can give rise to intricate, self-sustaining patterns, reflecting the emergent properties of complex systems.
+
+This project implements a cellular automaton, a discrete computational model that consists of a grid of cells, each in one of a finite number of states. The state of each cell evolves based on a set of rules.
 
 ## Getting Started
 
