@@ -14,8 +14,8 @@ The Game of Life has applications in various fields, such as computer science an
   ```bash
   python game_of_life.py --width WIDTH --height HEIGHT --frame_rate FRAME_RATE --pixel_size PIXEL_SIZE --probability PROBABILITY
   ```
-where
-  a. WIDTH and HEIGHT represent the dimensions of the pygame window.
-  b. FRAME_RATE determines the frame rate of the simulation.
-  c. PIXEL_SIZE represents the block size of each cell in the simulation
-  d. PROBABILITY denotes the probability of living cell in generation 0.
+where\n
+  a. WIDTH and HEIGHT represent the dimensions of the pygame window.\n
+  b. FRAME_RATE determines the frame rate of the simulation.\n
+  c. PIXEL_SIZE represents the block size of each cell in the simulation.\n
+  d. PROBABILITY denotes the probability of living cell in generation 0.\n
