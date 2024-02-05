@@ -18,11 +18,10 @@ This project implements a cellular automaton, a discrete computational model tha
    ```bash
    git clone https://github.com/your-username/cellular-automata.git
    cd cellular-automata
-
 2. Install Dependencies
     
     ```bash
     pip install -r requirements.txt
-
+    
 ## Contributing
 Feel free to contribute by opening issues or submitting pull requests. Follow our Contribution Guidelines for more details.
